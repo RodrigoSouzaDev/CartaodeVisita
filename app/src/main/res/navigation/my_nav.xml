@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.cartaodevisitas.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addBusinessCardFragment"
+            app:destination="@id/addBusinessCardFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addBusinessCardFragment2"
+            app:destination="@id/addBusinessCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBusinessCardFragment"
+        android:name="com.example.cartaodevisitas.ui.AddBusinessCardFragment"
+        android:label="fragment_add_business_card"
+        tools:layout="@layout/fragment_add_business_card" >
+        <action
+            android:id="@+id/action_addBusinessCardFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_addBusinessCardFragment_to_mainFragment2"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
